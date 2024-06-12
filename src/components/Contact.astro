@@ -4,28 +4,28 @@ import IconMail from "./IconMail.astro"
 ---
 <div class="flex flex-col items-center gap-16">
     <div class="flex flex-col items-center gap-3">
-      <h4 class="text-gray-400">Get In Touch</h4>
-      <h1 class="text-5xl text-center font-semibold">Contact</h1>
+      <h4 class="text-xs md:text-sm text-center text-gray-400">Get In Touch</h4>
+      <h1 class="xs:3xl md:text-5xl font-semibold">Contact</h1>
     </div>
     <div
-      class="flex items-center justify-evenly border rounded-full w-[700px] h-20 overflow-hidden"
+      class="flex items-center justify-evenly border rounded-full w-auto md:w-[700px] h-10 md:h-20 overflow-hidden"
     >
       <a
         href="mailto:leonardo.cueto.trabajo@gmail.com"
-        class="flex gap-3 items-center hover:bg-sky-100/70 py-6 px-10 cursor-pointer rounded-l-none transition-colors duration-300"
+        class="flex gap-3 items-center hover:bg-sky-100/70 py-6 px-4 md:px-10 cursor-pointer rounded-l-none transition-colors duration-300"
       >
         <IconMail className="size-6 md:size-9"/>
-        <span class="text-xl">leonardo.cueto.trabajo@gmail.com</span>
+        <span class="text-xs md:text-xl">leonardo.cueto.trabajo@gmail.com</span>
       </a>
       <div>
         <a
           href="https://www.linkedin.com/in/leonardo-cueto/"
           target="_blank"
           rel="nopener noreferrer"
-          class="flex items-center gap-3 cursor-pointer hover:bg-blue-200 py-6 px-16 rounded-r-none transition-colors duration-300"
+          class="flex items-center gap-3 cursor-pointer hover:bg-blue-200 py-6 px-8 md:px-16 rounded-r-none transition-colors duration-300"
         >
           <IconLinkedin className="size-6 md:size-9"/>
-          <span class="text-xl">LinkedIn</span>
+          <span class="text-xs md:text-xl">LinkedIn</span>
         </a>
       </div>
     </div>
