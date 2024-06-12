@@ -1,0 +1,31 @@
+---
+import CardAbout from '../components/CardAbout.astro'
+import IconExperience from '../components/IconExperience.astro'
+import IconPerson from '../components/IconPerson.astro'
+---
+<div class="flex flex-col justify-center items-center">
+    <h4 class="text-xs md:text-sm text-center pb-4 text-stone-400">Get To Know More</h4>
+    <h1 class="xs:3xl md:text-5xl font-semibold">About Me</h1>
+
+    <div class="flex gap-5 mt-10">
+      <CardAbout>
+          <IconExperience slot="icon"/>
+        <h1 class="text-xs md:text-base" slot="title"> Experience </h1>
+          <p class="text-[10px] md:text-base text-gray-400 text-center" slot="text">Frontend Development</p>
+      </CardAbout>
+      <CardAbout>
+          <IconPerson slot="icon"/>
+          <h1 class="text-xs md:text-base" slot="title">Education</h1>
+          <p  class="text-[10px] md:text-base text-gray-400" slot="text">UAI. Analyst Developer</p>
+      </CardAbout>
+    </div>
+    <div class="pt-10">
+      <p class="text-sm md:text-base min-w-80 max-w-[1000px] md:min-w-96">
+        I am enthusiastic and up-to-date with the latest trends and
+        technologies. I adapt quickly to new environments and learn easily.
+        Currently, I am finishing my career as a Programmer Analyst and I have
+        completed numerous courses on frontend development. I am highly
+        motivated to keep learning and growing professionally.
+      </p>
+    </div>
+  </div>

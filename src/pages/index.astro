@@ -4,13 +4,19 @@ import BtnDescargaCV from '../components/BtnDescargaCV.astro';
 import IconContact from '../components/IconContact.astro';
 import IconLinkedin from '../components/IconLinkedin.astro';
 import IconGitHub from '../components/IconGitHub.astro';
+import Skills from '../components/Skills.astro';
+import Certificate from '../components/Certificate.astro';
+import Project from '../components/Project.astro'
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Portfolio | Leonardo Daniel Cueto - Desarrollador y Programador Frontend +1 año de experiencia"
 description='Desarrollador Web Especializado en crear aplicaciones únicas'
 >
-	<main class="md:mr-32 mt-20 ">
-		<section class="flex flex-col md:flex-row justify-center items-center">
+	<main class="md:mr-42 ">
+		<section class="flex flex-col md:flex-row justify-center items-center py-32 md:mr-32">
 			<img
           src="/img/perfil.jpg"
           class="rounded-full size-[80px] md:size-[150px] lg:size-80 object-cover m-10"
@@ -35,7 +41,7 @@ description='Desarrollador Web Especializado en crear aplicaciones únicas'
 				<IconLinkedin className="size-6 md:size-9" />
 			  </a>
 			  <a
-				class="border-2 rounded-full border-black hover:bg-gray-300 hover:scale-110 transition"
+				class="border-2 rounded-full border-black hover:bg-sky-100  hover:scale-110 transition"
 				href="https://github.com/leonardocueto"
 				target="_blank"
 				rel="nopener noreferrer"
@@ -45,8 +51,22 @@ description='Desarrollador Web Especializado en crear aplicaciones únicas'
 			</div>
 		  </div>
 		</section>
+		
+		<section class="flex flex-col gap-3 mt-34 mb-20 py-36" id="Skills">
+			<Skills />
+			<Certificate />
+		</section>
+		<section class="my-20 mt-40 py-20" id="Project">
+			<Project />
+		</section>
+		<section class="my-20 mt-30 py-44" id="About">
+			<About />
+		</section>
+		<section class="my-20 mt-20 pt-36" id="Contact">
+			<Contact />
+		</section>
 	</main>
-	
+	<Footer/>
 	
 </Layout>
 

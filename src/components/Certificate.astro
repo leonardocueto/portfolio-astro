@@ -1,0 +1,36 @@
+---
+import CardCertificate from "./CardCertificate.astro";
+
+const cardsCertificate = [
+  {
+    src: "/img/GitCertificado.png",
+    alt: "Certificado GitHub",
+    link: "https://drive.google.com/file/d/10aSg_H8GWnlq09U_iS5lBOLA1a9FGoHY/view?usp=drive_link",
+  },
+  {
+    src: "/img/ReactCertificado.png",
+    alt: "Certificado React",
+    link: "https://drive.google.com/file/d/1GgJz1fLiMPAhD3LUJIRVtJtnzjriAJ01/view?usp=drive_link",
+  },
+  {
+    src: "/img/ScrumCertificado.png",
+    alt: "Certificado Scrum",
+    link: "https://drive.google.com/file/d/19zizrzEbngC6EvQyRbAwF82V4DLn6jMm/view?usp=drive_link",
+  },
+  {
+    src: "/img/TypeScriptCertificado.png",
+    alt: "Certificado TypeScript",
+    link: "https://drive.google.com/file/d/1sroFJ_x9wSzylBd7uwuXQeCm-e1foyC1/view?usp=drive_link",
+  },
+];
+---
+
+<div class="mt-10">
+    <h2 class="text-3xl md:text-4xl text-center font-semibold mt-2 mb-12">Certificate</h2>
+    <div class="flex gap-5 mb-1 ml-2 md:justify-center items-center flex-wrap">
+        {cardsCertificate.map( ({link, src,alt} )=> (
+          <CardCertificate link={link} src={src} alt={alt}/>
+
+        ))}
+    </div>
+  </div>

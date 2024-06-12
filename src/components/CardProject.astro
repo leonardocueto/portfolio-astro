@@ -1,0 +1,33 @@
+---
+const { projectName, src, alt, linkGitHub, linkDemo} = Astro.props
+---
+<div
+class="flex flex-col items-center px-2 py-3 border-2 border-stone-300 rounded-3xl w-40 h-56 md:w-80 md:h-96"
+>
+<div class="border rounded-3xl size-30 md:size-60 mt-4">
+  <img
+    src={src}
+    alt={alt}
+    class="w-full h-full object-cover hover:grayscale-0 transform transition duration-300 ease-in-out hover:scale-105 border rounded-2xl cursor-pointer"
+  />
+</div>
+<div class="py-4">
+  <p class="text-md md:text-2xl">{ projectName }</p>
+</div>
+<div class="flex gap-2">
+  <a
+    href={linkGitHub}
+    target="_blank"
+    rel="nopener noreferrer"
+    class="border rounded-full py-1 px-2 text-[7px] md:py-3 md:px-6 md:text-xs"
+    >GitHub</a
+  >
+  <a
+    href={linkDemo}
+    target="_blank"
+    rel="nopener noreferrer"
+    class="border rounded-full py-1 px-2 md:py-3 md:px-6 text-[7px] md:text-xs"
+    >Live Demo</a
+  >
+</div>
+</div>

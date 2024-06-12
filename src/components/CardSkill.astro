@@ -1,0 +1,13 @@
+---
+const {card, index} = Astro.props
+---
+<div class="border-gray-200 border rounded-2xl p-4 md:p-6  h-14 w-20 md:w-40 md:h-28 min-w-40 md:min-w-40 min-h-20 md:min-h-28" key={index}>
+    <h1 class=" text-md md:text-2xl text-center mb-2">{card.titulo}</h1>
+    <div class="flex gap-2 items-center justify-center md:justify-start">
+      {Array.from({ length: card.skills }).map((_, i) => (
+        <div key={i}>
+          <div class="bg-black size-2 md:size-4 rounded-full"></div>
+        </div>
+      ))}
+    </div>
+  </div>

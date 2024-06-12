@@ -1,0 +1,31 @@
+---
+import CardSkill from "./CardSkill.astro";
+
+interface CardSkill {
+  titulo: string;
+  skills: number;
+}
+
+const cardsSkills: CardSkill[] = [
+  { titulo: "Vue JS 3", skills: 5 },
+  { titulo: "Pinia", skills: 5 },
+  { titulo: "Astro", skills: 3 },
+  { titulo: "Node.js", skills: 2 },
+  { titulo: "React", skills: 3 },
+  { titulo: "HTML", skills: 5 },
+  { titulo: "SQL", skills: 3 },
+  { titulo: "Bootstrap", skills: 4 },
+  { titulo: "Tailwind", skills: 5 },
+  { titulo: "Strapi", skills: 4 },
+  { titulo: "SASS", skills: 4 },
+  { titulo: "CSS", skills: 5 },
+];
+---
+
+<h1 class="text-xs md:text-sm text-center pb-4 text-gray-400">Explore My</h1>
+<h1 class="text-3xl md:text-5xl text-center font-bold mb-10">Skills</h1>
+<div class="flex flex-wrap justify-start items-start gap-5 overflow-auto max-h-[70vh]">
+  {cardsSkills.map((card, index) => (
+    <CardSkill card={card} index={index} />
+  ))}
+</div>
