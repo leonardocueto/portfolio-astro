@@ -1,75 +1,99 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import BtnDescargaCV from '../components/BtnDescargaCV.astro';
-import IconContact from '../components/IconContact.astro';
-import IconLinkedin from '../components/IconLinkedin.astro';
-import IconGitHub from '../components/IconGitHub.astro';
-import Skills from '../components/Skills.astro';
-import Certificate from '../components/Certificate.astro';
-import Project from '../components/Project.astro'
-import About from '../components/About.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import BtnDescargaCV from "../components/BtnDescargaCV.astro";
+import IconContact from "../components/IconContact.astro";
+import IconLinkedin from "../components/IconLinkedin.astro";
+import IconGitHub from "../components/IconGitHub.astro";
+import Skills from "../components/Skills.astro";
+import Certificate from "../components/Certificate.astro";
+import Project from "../components/Project.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import IconFlechaArriba from "../components/IconFlechaArriba.astro";
 ---
 
-<Layout title="Portfolio | Leonardo Daniel Cueto - Desarrollador y Programador Frontend +1 año de experiencia"
-description='Desarrollador Web Especializado en crear aplicaciones únicas'
+<Layout
+  title='Portfolio | Leonardo Daniel Cueto - Desarrollador y Programador Frontend +1 año de experiencia'
+  description='Desarrollador Web Especializado en crear aplicaciones únicas'
 >
-	<main class="md:mr-42 ">
-		<section class="flex flex-col md:flex-row justify-center items-center py-32 md:mr-32">
-			<img
-          src="/img/perfil.jpg"
-          class="rounded-full size-[80px] md:size-[150px] lg:size-80 object-cover m-10"
-          alt="Perfil"
-        />
-		
-        <div class="flex flex-col gap-3 text-center">
-			<p class="text-xs md:text-md lg:text-xl font-semibold">Hello, I'm</p>
-			<p class="text-xl md:text-2xl lg:text-3xl font-bold">Leonardo Cueto</p>
-			<p class="text-sm md:text-xl font-semibold text-gray-700">Frontend Developer</p>
-			<div class="flex justify-evenly  w-[150px] h[28px]  md:w-[300px] md:h-[48px]">
-			  <BtnDescargaCV  />
-			  <IconContact />
-			</div>
-			<div class="flex gap-x-2 md:gap-x-4 justify-center items-center">
-			  <a
-				class="hover:scale-110 transition rounded-full border-black hover:bg-blue-400"
-				href="https://www.linkedin.com/in/leonardo-cueto/"
-				target="_blank"
-				rel="nopener noreferrer"
-			  >
-				<IconLinkedin className="size-6 md:size-9" />
-			  </a>
-			  <a
-				class="border-2 rounded-full border-black hover:bg-sky-100  hover:scale-110 transition"
-				href="https://github.com/leonardocueto"
-				target="_blank"
-				rel="nopener noreferrer"
-			  >
-				<IconGitHub className="size-6 md:size-9"/>
-			  </a>
-			</div>
-		  </div>
-		</section>
-		
-		<section class="flex flex-col gap-3 mt-34 mb-20 py-36" id="Skills">
-			<Skills />
-			<Certificate />
-		</section>
-		<section class="my-20 mt-40 py-20" id="Project">
-			<Project />
-		</section>
-		<section class="my-20 mt-30 py-44" id="About">
-			<About />
-		</section>
-		<section class="my-20 mt-20 pt-36" id="Contact">
-			<Contact />
-		</section>
-	</main>
-	<Footer/>
-	
+  <main class='md:mr-42'>
+    <section
+      class='flex flex-col md:flex-row justify-center items-center py-32 md:mr-32'
+    >
+      <img
+        src='/img/perfil.jpg'
+        class='rounded-full size-[80px] md:size-[150px] lg:size-80 object-cover m-10'
+        alt='Perfil'
+      />
+
+      <div class='flex flex-col gap-3 text-center'>
+        <p class='text-xs md:text-md lg:text-xl font-semibold'>Hello, I'm</p>
+        <p class='text-xl md:text-2xl lg:text-3xl font-bold'>Leonardo Cueto</p>
+        <p class='text-sm md:text-xl font-semibold text-gray-700'>
+          Frontend Developer
+        </p>
+        <div
+          class='flex justify-evenly w-[150px] h[28px] md:w-[300px] md:h-[48px]'
+        >
+          <BtnDescargaCV />
+          <IconContact />
+        </div>
+        <div class='flex gap-x-2 md:gap-x-4 justify-center items-center'>
+          <a
+            class='hover:scale-110 transition rounded-full border-black hover:bg-blue-400'
+            href='https://www.linkedin.com/in/leonardo-cueto/'
+            target='_blank'
+            rel='nopener noreferrer'
+          >
+            <IconLinkedin className='size-6 md:size-9' />
+          </a>
+          <a
+            class='border-2 rounded-full border-black hover:bg-sky-100 hover:scale-110 transition'
+            href='https://github.com/leonardocueto'
+            target='_blank'
+            rel='nopener noreferrer'
+          >
+            <IconGitHub className='size-6 md:size-9' />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class='flex flex-col gap-3 mt-34 mb-20 py-36'
+      id='Skills'
+    >
+      <Skills />
+      <Certificate />
+    </section>
+    <section
+      class='my-20 mt-40 py-20'
+      id='Project'
+    >
+      <Project />
+    </section>
+    <section
+      class='my-20 mt-30 py-44'
+      id='About'
+    >
+      <About />
+    </section>
+    <section
+      class='my-20 mt-20 pt-36'
+      id='Contact'
+    >
+      <Contact />
+    </section>
+  </main>
+  <Footer />
+
+  <a
+    href='#Home'
+    class='flex fixed bottom-20 right-16 hover:bg-sky-200/55 w-16 h-16 rounded-full justify-center items-center'
+  >
+    <IconFlechaArriba />
+  </a>
 </Layout>
 
-<style>
-
-</style>
+<style></style>
