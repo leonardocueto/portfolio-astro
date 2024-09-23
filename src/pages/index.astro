@@ -2,82 +2,90 @@
 import Layout from "../layouts/Layout.astro";
 import BtnDescargaCV from "../components/BtnDescargaCV.astro";
 import IconContact from "../components/IconContact.astro";
-import IconLinkedin from "../components/IconLinkedin.astro";
-import IconGitHub from "../components/IconGitHub.astro";
 import Skills from "../components/Skills.astro";
 import Certificate from "../components/Certificate.astro";
 import Project from "../components/Project.astro";
-import About from "../components/About.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import IconFlechaArriba from "../components/IconFlechaArriba.astro";
+
+import { IconBrandGithub, IconBrandLinkedin} from "@tabler/icons-vue";
+
+
 ---
 
 <Layout
   title='Portfolio | Leonardo Daniel Cueto - Desarrollador y Programador Frontend +1 año de experiencia'
   description='Desarrollador Web Especializado en crear aplicaciones únicas'
 >
-  <main class='md:mr-42'>
+  <main class="mx-16 px-6 pt-24 relative z-10">
     <section
-      class='flex flex-col md:flex-row justify-center items-center py-32 md:mr-32'
+      class='min-h-screen flex items-center py-20'
+      id="About"
     >
-      <img
-        src='/img/perfil.jpg'
-        class='rounded-full size-[80px] md:size-[150px] lg:size-80 object-cover m-10'
-        alt='Perfil'
-      />
-
-      <div class='flex flex-col gap-3 text-center'>
-        <p class='text-xs md:text-md lg:text-xl font-semibold'>Hello, I'm</p>
-        <p class='text-xl md:text-2xl lg:text-3xl font-bold'>Leonardo Cueto</p>
-        <p class='text-sm md:text-xl font-semibold text-gray-700'>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 items-center">
+      <div class="space-y-6">
+        <h1 class="text-6xl font-bold mb-4">Hello, I'm Leonardo Cueto</h1>
+        <p class="text-3xl mb-8 text-blue-500 dark:text-blue-400">
           Frontend Developer
         </p>
+        <div class="mt-6">
+          <p>
+            I am enthusiastic and up-to-date with the latest trends and technologies. I adapt quickly to new environments and learn easily. Currently, I am finishing my career as a Programmer Analyst and I have completed numerous courses on frontend development. I am highly motivated to keep learning and growing professionally.
+          </p>
+        </div>
         <div
-          class='flex justify-evenly w-[150px] h[28px] md:w-[300px] md:h-[48px]'
+          class='flex justify-center items-center md:w-[600px] md:h-[48px] gap-8'
         >
           <BtnDescargaCV />
           <IconContact />
-        </div>
-        <div class='flex gap-x-2 md:gap-x-4 justify-center items-center'>
           <a
-            class='hover:scale-110 transition rounded-full border-black hover:bg-blue-400'
-            href='https://www.linkedin.com/in/leonardo-cueto/'
-            target='_blank'
-            rel='nopener noreferrer'
-          >
-            <IconLinkedin className='size-6 md:size-9' />
-          </a>
+          class='hover:scale-110 transition-all '
+          href='https://www.linkedin.com/in/leonardo-cueto/'
+          target='_blank'
+          rel='nopener noreferrer'
+        >
+        <IconBrandLinkedin color="#374151" size="50"/>
+        </a>
           <a
-            class='border-2 rounded-full border-black hover:bg-sky-100 hover:scale-110 transition'
+            class='rounded-md hover:scale-110 transition-all bg-gray-700 dark:bg-gray-600 p-1 '
             href='https://github.com/leonardocueto'
             target='_blank'
             rel='nopener noreferrer'
           >
-            <IconGitHub className='size-6 md:size-9' />
+            <IconBrandGithub  color="white"
+            size="30"/>
           </a>
-        </div>
+         </div>
       </div>
+      <div class="flex justify-center">
+        <img
+            src='/img/perfil.jpg'
+            class='rounded-full size-56 lg:size-80 object-cover m-10'
+            alt='Perfil'
+          />
+      </div>
+    </div>
+      </div>
+      
     </section>
 
     <section
-      class='flex flex-col gap-3 mt-34 mb-20 py-36'
+      class='flex flex-col gap-3 mt-34 mb-20 py-32'
       id='Skills'
     >
       <Skills />
+     
+    </section>
+    <section id="Certificates" class="mb-12 py-32">
       <Certificate />
     </section>
     <section
-      class='my-20 mt-40 py-20'
+      class='min-h-screen flex items-center
+       my-20 py-20'
       id='Project'
     >
       <Project />
-    </section>
-    <section
-      class='my-20 mt-30 py-44'
-      id='About'
-    >
-      <About />
     </section>
     <section
       class='my-20 mt-20 pt-36'
@@ -89,8 +97,8 @@ import IconFlechaArriba from "../components/IconFlechaArriba.astro";
   <Footer />
 
   <a
-    href='#Home'
-    class='flex fixed bottom-20 right-16 hover:bg-sky-200/55 w-16 h-16 rounded-full justify-center items-center'
+    href='#About'
+    class='flex fixed bottom-20 right-16 hover:bg-gray-200/55 w-16 h-16 rounded-full justify-center items-center z-50'
   >
     <IconFlechaArriba />
   </a>

@@ -1,31 +1,33 @@
 ---
-import CardSkill from "./CardSkill.astro";
-
 interface CardSkill {
-  titulo: string;
-  skills: number;
+  title: string;
+  percentage: number;
 }
 
 const cardsSkills: CardSkill[] = [
-  { titulo: "Vue JS 3", skills: 5 },
-  { titulo: "Pinia", skills: 5 },
-  { titulo: "Astro", skills: 3 },
-  { titulo: "Node.js", skills: 2 },
-  { titulo: "React", skills: 3 },
-  { titulo: "HTML", skills: 5 },
-  { titulo: "SQL", skills: 3 },
-  { titulo: "Bootstrap", skills: 4 },
-  { titulo: "Tailwind", skills: 5 },
-  { titulo: "Strapi", skills: 4 },
-  { titulo: "SASS", skills: 4 },
-  { titulo: "CSS", skills: 5 },
+  { title: "Vue JS 3", percentage: 100 },
+  { title: "Pinia", percentage: 100 },
+  { title: "Astro", percentage: 80 },
+  { title: "Node.js", percentage: 60 },
+  { title: "React", percentage: 50 },
+  { title: "HTML", percentage: 100 },
+  { title: "SQL", percentage: 100 },
+  { title: "Bootstrap", percentage: 100 },
+  { title: "Tailwind", percentage: 100 },
+  { title: "Strapi", percentage: 100 },
+  { title: "SASS", percentage: 80 },
+  { title: "CSS", percentage: 100 },
 ];
+
+import PercentageBar from './PercentageBar.astro'; // Asegúrate de ajustar la ruta según tu estructura de archivos
 ---
 
 <h1 class="text-xs md:text-sm text-center pb-4 text-gray-400">Explore My</h1>
 <h1 class="text-3xl md:text-5xl text-center font-bold mb-10">Skills</h1>
-<div class="flex flex-wrap justify-start items-start gap-5 overflow-auto max-h-[70vh]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
   {cardsSkills.map((card, index) => (
-    <CardSkill card={card} index={index} />
+   <PercentageBar card={card} index={index} />
   ))}
+
+
 </div>
