@@ -1,0 +1,16 @@
+---
+const { card } = Astro.props;
+---
+
+<div class="relative w-full">
+    <div class="flex items-center justify-between">
+        <p>{card.title}</p>
+        <span class="text-blue-600 "> {card.percentage}%</span>
+    </div>
+  <div class="w-full bg-gray-200 rounded-full h-4 mt-1">
+    <div
+      style={`width: ${card.percentage}%`}
+      class="bg-gradient-to-r from-blue-200 to-blue-700 rounded-full h-full"
+    ></div>
+  </div>
+</div>

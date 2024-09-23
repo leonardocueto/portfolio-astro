@@ -2,52 +2,45 @@
 import CardProject from "./CardProject.astro";
 const cardsProjects = [
   {
-    projectName: "Sales Manager",
-    src: "/img/imgSalesManager.png",
-    alt: "Sales Manager",
-    linkGitHub: "https://github.com/derianrob/crm/tree/testing",
-    linkDemo: "https://google.com",
+    projectName: "Cripto React",
+    description: "Cryptocurrency trading in different currencies",
+    src: "/img/cripto-react.png",
+    alt: "Cripto React",
+    linkGitHub: "https://github.com/leonardocueto/criptos-react",
+
   },
   {
-    projectName: "Sales Manager",
-    src: "/img/imgSalesManager.png",
-    alt: "Sales Manager",
-    linkGitHub: "https://google.com",
-    linkDemo: "https://google.com",
+    projectName: "GuitarLA",
+    description: "Guitar shop with a variety of guitars",
+    src: "/img/guitarLA.png",
+    alt: "GuitarLA",
+    linkGitHub: "https://github.com/leonardocueto/GuitarLA-Next",
   },
   {
-    projectName: "Sales Manager",
-    src: "/img/imgSalesManager.png",
-    alt: "Sales Manager",
-    linkGitHub: "https://google.com",
-    linkDemo: "https://google.com",
+    projectName: "Portfolio",
+    description: "Personal portfolio ",
+    src: "/img/portfolio.png",
+    alt: "Portfolio",
+    linkGitHub: "https://github.com/leonardocueto/portfolio-astro",
   },
-  {
-    projectName: "Sales Manager",
-    src: "/img/imgSalesManager.png",
-    alt: "Sales Manager",
-    linkGitHub: "https://google.com",
-    linkDemo: "https://google.com",
-  },
+
 
 ];
 ---
-<div class="flex flex-col mt-10">
+<div class="w-full">
     <h4 class="text-xs md:text-sm text-center pb-4 text-stone-400">Browse My Recent</h4>
-    <h1 class="text-3xl md:text-5xl text-center font-bold">Projects</h1>
-    <div class="mt-12">
-      <div class="flex items-center justify-center gap-5 overflow-auto md:max-h-[70vh] flex-wrap">
+    <h1 class=" md:text-5xl text-center font-bold text-5xl mb-14">Projects</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {
             cardsProjects.map( card =>(
                 <CardProject 
                 src={card.src}
           alt={card.alt}
           linkGitHub={card.linkGitHub}
-          linkDemo={card.linkDemo}
           projectName={card.projectName}
+          description={card.description}
           />
           ))
         }
-      </div>
     </div>
   </div>

@@ -1,32 +1,34 @@
 ---
-import IconLinkedin from "./IconLinkedin.astro"
-import IconMail from "./IconMail.astro"
+import { IconMail, IconBrandLinkedin} from "@tabler/icons-vue";
+
 ---
 <div class="flex flex-col items-center gap-16">
     <div class="flex flex-col items-center gap-3">
-      <h4 class="text-xs md:text-sm text-center text-gray-400">Get In Touch</h4>
-      <h1 class="xs:3xl md:text-5xl font-semibold">Contact</h1>
+      <h4 class="text-xs md:text-sm text-center pb-4 text-stone-400">Get In Touch</h4>
+      <h1 class="md:text-5xl text-center font-bold text-5xl mb-14">Contact</h1>
     </div>
     <div
-      class="flex items-center justify-evenly border rounded-full w-auto md:w-[700px] h-10 md:h-20 overflow-hidden"
+      class="flex flex-col md:flex-row items-center justify-between border rounded-2xl w-full md:w-[700px] h-40 md:h-20 overflow-hidden gap-2"
     >
       <a
         href="mailto:leonardo.cueto.trabajo@gmail.com"
-        class="flex gap-3 items-center hover:bg-sky-100/70 py-6 px-4 md:px-10 cursor-pointer rounded-l-none transition-colors duration-300"
+        class="flex gap-3 justify-center items-center  cursor-pointer rounded-l-none duration-300 hover:scale-105 transition-all size-full px-6"
       >
-        <IconMail className="size-6 md:size-9"/>
-        <span class="text-xs md:text-xl">leonardo.cueto.trabajo@gmail.com</span>
+      <span class="rounded-md  bg-gray-700 p-2">
+        <IconMail color="white" size="25"/>
+      </span>
+ 
+        <span class="text-xl">leonardo.cueto.trabajo@gmail.com</span>
       </a>
-      <div>
         <a
           href="https://www.linkedin.com/in/leonardo-cueto/"
           target="_blank"
           rel="nopener noreferrer"
-          class="flex items-center gap-3 cursor-pointer hover:bg-blue-200 py-6 px-8 md:px-16 rounded-r-none transition-colors duration-300"
+          class="flex items-center justify-center gap-3 cursor-pointer   rounded-r-none duration-300 hover:scale-105 transition-all size-full px-6"
         >
-          <IconLinkedin className="size-6 md:size-9"/>
-          <span class="text-xs md:text-xl">LinkedIn</span>
+        <IconBrandLinkedin color="#374151" size="50"/>
+          <span class="text-xl">LinkedIn</span>
         </a>
-      </div>
+     
     </div>
   </div>

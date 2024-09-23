@@ -3,34 +3,47 @@ import CardCertificate from "./CardCertificate.astro";
 
 const cardsCertificate = [
   {
-    src: "/img/GitCertificado.png",
-    alt: "Certificado GitHub",
+    title: "Git+GitHub: Todo un sistema de control de versiones",
+    academy: "Udemy",
+    date: "May, 8th 2023",
     link: "https://drive.google.com/file/d/10aSg_H8GWnlq09U_iS5lBOLA1a9FGoHY/view?usp=drive_link",
   },
   {
-    src: "/img/ReactCertificado.png",
-    alt: "Certificado React",
+    title: "React.JS Developer",
+    academy: "EducaciónIT",
+    date: "Feb, 22th 2023",
     link: "https://drive.google.com/file/d/1GgJz1fLiMPAhD3LUJIRVtJtnzjriAJ01/view?usp=drive_link",
   },
   {
-    src: "/img/ScrumCertificado.png",
-    alt: "Certificado Scrum",
+    title: "Scrim fundation professional certificate sfpc",
+    academy: "CertiProf",
+    date:"Apr, 9th 2023",
     link: "https://drive.google.com/file/d/19zizrzEbngC6EvQyRbAwF82V4DLn6jMm/view?usp=drive_link",
   },
   {
-    src: "/img/TypeScriptCertificado.png",
-    alt: "Certificado TypeScript",
+    title: "TypeScript: Tu completa guia y manual de mano",
+    academy: "Udemy",
+    date: "Oct, 23th 2023",
     link: "https://drive.google.com/file/d/1sroFJ_x9wSzylBd7uwuXQeCm-e1foyC1/view?usp=drive_link",
   },
 ];
 ---
 
 <div class="mt-10">
-    <h2 class="text-3xl md:text-4xl text-center font-semibold mt-2 mb-12">Certificate</h2>
+
+    <h2 class="text-3xl md:text-5xl text-center font-bold mb-10
+     text-gray-800 dark:text-white ">Certificates</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {cardsCertificate.map( ({link, academy, date, title} )=> (
+      <CardCertificate link={link} academy={academy} date={date} title={title}/>
+
+    ))}
+     </div>
+     <!--
     <div class="flex gap-5 mb-1 ml-2 md:justify-center items-center flex-wrap">
         {cardsCertificate.map( ({link, src,alt} )=> (
           <CardCertificate link={link} src={src} alt={alt}/>
 
         ))}
-    </div>
+    </div> -->
   </div>
